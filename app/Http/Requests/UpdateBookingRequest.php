@@ -25,8 +25,8 @@ class UpdateBookingRequest extends FormRequest
     public function rules()
     {
         return [
-           'start_date'=>'required',//|after:tomorrow',
-           'end_date'  => 'required',
+           'start_date'=>'required|date',//|after:tomorrow',
+           'end_date'  => 'required|date',
            'is_active' => 'boolean:true,false',
            'apartments_id'  => 'integer|exists:apartments,id',
            'user_id'   => 'integer|exists:users,id'
