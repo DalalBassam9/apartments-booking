@@ -24,7 +24,7 @@ class BookingController extends Controller
         
     }
     
-    public function  store(StoreBookingRequest $request)
+    public function  store(StoreBookingRequest $request) 
     {
        auth()->user()->bookings()->create(['end_date'=>$request->end_date,
                                          'start_date'=>$request->start_date,
